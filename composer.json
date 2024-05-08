@@ -4,11 +4,13 @@
     "description": "Первый пакет",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
-    "authors": {
-        "name": "antefil",
-        "email": "stebel555@mail.ru",
-		"homepage": "https://vk.com/antefil"
-    },
+    "authors": [
+        {
+            "name": "antefil",
+            "email": "stebel555@mail.ru",
+            "homepage": "https://vk.com/antefil"
+        }
+    ]
 	"require": {
         "php": "^8.2",
         "laravel/framework": "^11.0",
