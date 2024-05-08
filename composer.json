@@ -1,5 +1,5 @@
 {
-    "name": "parser/posts",
+    "name": "parserfilip/posts",
     "type": "project",
     "description": "Первый пакет",
     "keywords": ["laravel", "framework"],
