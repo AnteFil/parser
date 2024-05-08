@@ -1,0 +1,34 @@
+{
+    "name": "parser/posts",
+    "type": "project",
+    "description": "Первый пакет",
+    "keywords": ["laravel", "framework"],
+    "license": "MIT",
+    "authors": {
+        "name": "Fil",
+        "email": "stebel555@mail.ru",
+		"homepage": "https://vk.com/antefil",
+    },
+	"require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0",
+        "laravel/tinker": "^2.9"
+    },
+
+    "autoload": {
+        "psr-4": {
+			"Parser\\Posts\\": "src",
+        }
+    },
+   
+    "extra": {
+		"laravel": {
+			"providers": [
+            "Parser\\Posts\\PostServiceProvider"
+			],
+		}
+	},
+
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
