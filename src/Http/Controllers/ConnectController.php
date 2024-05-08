@@ -5,7 +5,7 @@
 //Implicit Flow для получения ключа доступа пользователя
 //https://oauth.vk.com/authorize?client_id=51896659&display=page&redirect_uri=https://api.vk.com/blank.html&scope=offline,wall,photos,video&response_type=token&v=5.131
 //System Configurations
-namespace Parser\Posts\Http\Controllers;
+namespace Antefil\Parser\Http\Controllers;
 
 use Illuminate\Http\Request;
 

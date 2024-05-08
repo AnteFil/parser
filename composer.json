@@ -1,5 +1,5 @@
 {
-    "name": "parser/posts",
+    "name": "antefil/parser",
     "type": "project",
     "description": "Первый пакет",
     "keywords": ["laravel", "framework"],
@@ -7,7 +7,7 @@
     "authors": {
         "name": "Fil",
         "email": "stebel555@mail.ru",
-		"homepage": "https://vk.com/antefil",
+		"homepage": "https://vk.com/antefil"
     },
 	"require": {
         "php": "^8.2",

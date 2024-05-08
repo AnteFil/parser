@@ -1,6 +1,6 @@
 <?php
 
-namespace Parser\Posts\Providers;
+namespace Antefil\Parser\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

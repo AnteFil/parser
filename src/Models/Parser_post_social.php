@@ -1,6 +1,6 @@
 <?php
 
-namespace Parser\Posts\Models;
+namespace Antefil\Parser\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

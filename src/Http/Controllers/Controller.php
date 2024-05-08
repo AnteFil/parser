@@ -1,6 +1,6 @@
 <?php
 
-namespace Parser\Posts\Http\Controllers;
+namespace Antefil\Parser\Http\Controllers;
 
 abstract class Controller
 {
