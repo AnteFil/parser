@@ -19,14 +19,14 @@
 
     "autoload": {
         "psr-4": {
-		"Parser\\Posts\\": "src"
+		"Antefil\\Parser\\": "src"
         }
     },
    
     "extra": {
 		"laravel": {
 			"providers": [
-            "Parser\\Posts\\PostServiceProvider"
+            "Antefil\\Parser\\PostServiceProvider"
 			]
 		},
 		"branch-alias": {
