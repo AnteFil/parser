@@ -26,12 +26,12 @@
     "extra": {
 		"laravel": {
 			"providers": [
-            "Antefil\\Parser\\PostServiceProvider"
+            "Antefil\\Parser\\Providers\\PostServiceProvider"
 			]
 		},
 		"branch-alias": {
-            "dev-master": "1.0.1-dev",
-            "dev-1.0": "1.0.1-dev"
+            "dev-master": "1.0.1.1",
+            "dev-1.0": "1.0.1.1"
         }
 	}
 }
