@@ -1,15 +1,11 @@
 {
-<<<<<<< HEAD
     "name": "antefil/parser",
-=======
-    "name": "parserfilip/posts",
->>>>>>> origin/master
     "type": "project",
     "description": "Первый пакет",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "authors": {
-        "name": "Fil",
+        "name": "antefil",
         "email": "stebel555@mail.ru",
 		"homepage": "https://vk.com/antefil"
     },
