@@ -29,8 +29,5 @@
             "Parser\\Posts\\PostServiceProvider"
 			]
 		}
-	},
-
-    "minimum-stability": "stable",
-    "prefer-stable": true
+	}
 }
