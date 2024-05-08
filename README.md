@@ -1,5 +1,5 @@
 ## Пробные пакеты
 
-####Установка
+Установка
 
- - composer require parser/post
+ - composer create-project antefil/parser
