@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "name": "antefil/parser",
+=======
+    "name": "parserfilip/posts",
+>>>>>>> origin/master
     "type": "project",
     "description": "Первый пакет",
     "keywords": ["laravel", "framework"],
@@ -17,7 +21,7 @@
 
     "autoload": {
         "psr-4": {
-			"Parser\\Posts\\": "src",
+		"Parser\\Posts\\": "src"
         }
     },
    
@@ -25,7 +29,7 @@
 		"laravel": {
 			"providers": [
             "Parser\\Posts\\PostServiceProvider"
-			],
+			]
 		}
 	},
 
