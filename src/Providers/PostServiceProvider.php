@@ -21,14 +21,14 @@ class PostServiceProvider extends ServiceProvider
     {
        $this->loadRoutesFrom(__DIR__.'/../routes/posts.php');
 	   $this->loadViewsFrom(__DIR__.'/../resources/views', 'posts');
+	   $this->publishes([
+			__DIR__.'/../resources/views' => resource_path('views/vendor/parser'),
+		]);
 	   $this->publishesMigrations([
 			__DIR__.'/../database/migrations' => database_path('migrations'),
 		]);
 	   $this->publishes([
 			__DIR__.'/../config/social.php' => config_path('social.php'),
-		]);
-		$this->publishes([
-			__DIR__.'/../resources/views' => resource_path('views/vendor/parser'),
 		]);
     }
 }
