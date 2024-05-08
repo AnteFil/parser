@@ -28,6 +28,10 @@
 			"providers": [
             "Parser\\Posts\\PostServiceProvider"
 			]
-		}
+		},
+		"branch-alias": {
+            "dev-master": "1.0.1-dev",
+            "dev-1.0": "1.0.1-dev"
+        }
 	}
 }
