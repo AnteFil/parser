@@ -17,19 +17,19 @@ class InstallPakController extends Controller
 		$config = include $filePath;
 		// Получаем доступ к данным config массива и проверяем. 
 		if($config['VK_ID_GROUP']==''){
-			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_ID_GROUP</b>: скрипт использует ID группы ВК для постинга в эту группу <a href='https://vk.com/groups'>Мои группы ВК</a></b>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_ID_GROUP</b>: скрипт использует ID группы ВК для постинга в эту группу <a href='https://vk.com/groups' target='_blank' >Мои группы ВК</a></b>");
 		}
 		
 		if($config['VK_APP_ID']==''){
-			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_APP_ID</b>: скрипт использует ID приложения ВК что бы работать с соц.сетью получить здесь <a href='https://id.vk.com/about/business/go'>Мои группы ВК</a>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_APP_ID</b>: скрипт использует ID приложения ВК что бы работать с соц.сетью получить здесь <a href='https://id.vk.com/about/business/go' target='_blank'>Мои группы ВК</a>");
 		}
 		
 		if($config['VK_SERVICE_TOKEN_APP']==''){
-			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_SERVICE_TOKEN_APP</b>: получить сервисный ключ доступа можено здесь <a href='https://id.vk.com/about/business/go'>Сервисный ключ</a>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_SERVICE_TOKEN_APP</b>: получить сервисный ключ доступа можено здесь <a href='https://id.vk.com/about/business/go' target='_blank'>Сервисный ключ</a>");
 		}
 	
 		if($config['VK_API_TOKEN_USER']==''){
-			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_API_TOKEN_USER</b>: ключ пользователя API необходим для работы с VK. Что бы получить ключ пользователя API пройдите по ссылке <a href=".route('vendor_add_connect_vk').">получить ключ API</a>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_API_TOKEN_USER</b>: ключ пользователя API необходим для работы с VK. Что бы получить ключ пользователя API пройдите по ссылке <a href=".route('vendor_add_connect_vk')." target='_blank'>получить ключ API</a>");
 		}
 		
 		if($config['VK_VERSION_API']!=='5.131'){
@@ -68,14 +68,15 @@ class InstallPakController extends Controller
 		 *
 		 * Старт проверка Python для обработки изображения PROCESSING_IMG
 		 *
-		 */		
+		 */	
 		if($config['PROCESSING_IMG']==''){
-			exit("</br><b>Вы не указали путь к скрипту Python processing_img.py для обработки изображения</b>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>PROCESSING_IMG</b>:необходимо указать путь к файлу <b>Python с расширением .py</b> для обработки изображения");
 		}
 		if (!touch($config['PROCESSING_IMG'])) {
 			exit("Вы указали ".$config['PROCESSING_IMG'].", однако здесь нельзя создать файл");
 		}
 		$path_info = pathinfo($config['PROCESSING_IMG']);
+		dd($path_info);
 		if (empty($path_info['extension']) or strtolower($path_info['extension']) !== 'py') {
 			exit("Вы указали неверный файл, нужно указать файл с расширением .py.");
 		}
@@ -86,7 +87,7 @@ class InstallPakController extends Controller
 		 */		
 
 		if($config['RESULT_IMG_JSON']==''){
-			exit("</br><b>Вы не указали путь к файлу json_img.json для обмена результатами работы по изображению</b>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>RESULT_IMG_JSON</b>: необходимо указать путь к файлу в формате <b>.json</b> для обмена результатами работы по изображению");
 		}
 		if (!touch($config['RESULT_IMG_JSON'])) {
 			exit("Вы указали ".$config['RESULT_IMG_JSON'].", однако здесь нельзя создать файл");
