@@ -28,7 +28,7 @@ return [
 	'RESULT_TEXT_JSON' => '',
 	//Путь к скрипту для обработки изображения base_path('processing_img.py'),
 	'PROCESSING_IMG' => '',
-	//Путь к файлу обмена JSON IMG base_path('json_img.json'), 
+	//Путь к файлу обмена JSON IMG base_path('json_img.json'),
 	'RESULT_IMG_JSON' => '',
 ];
 
