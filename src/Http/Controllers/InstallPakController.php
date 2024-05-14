@@ -76,9 +76,9 @@ class InstallPakController extends Controller
 			exit("Вы указали ".$config['PROCESSING_IMG'].", однако здесь нельзя создать файл");
 		}
 		$path_info = pathinfo($config['PROCESSING_IMG']);
-		dd($path_info);
+
 		if (empty($path_info['extension']) or strtolower($path_info['extension']) !== 'py') {
-			exit("Вы указали неверный файл, нужно указать файл с расширением .py.");
+			exit("Вы указали <b>".$path_info['basename']."</b> это не верно, нужно указать файл с расширением <b>.py</b>.");
 		}
 		/* Конец
 		 *
@@ -95,7 +95,7 @@ class InstallPakController extends Controller
 		// Получаем информацию о пути к файлу
 		$path_info = pathinfo($config['RESULT_IMG_JSON']);
 		if (empty($path_info['extension']) or strtolower($path_info['extension']) !== 'json') {
-			exit("Вы указали неверный файл, нужно указать файл с расширением .json.");
+			exit("Вы указали <b>".$path_info['basename']."</b> это не верно, нужно указать файл с расширением <b>.json</b>.");
 		} 
 		/* Конец
 		 *
