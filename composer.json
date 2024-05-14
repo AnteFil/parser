@@ -32,7 +32,8 @@
 	},
 	"scripts": {
         "post-install-cmd": [
-			"@php artisan vendor:publish --provider='Antefil\Parser\Providers\PostServiceProvider"
+			"@php artisan vendor:publish --provider='Antefil\\Parser\\Providers\\PostServiceProvider'",
+			"echo 'Autoload dump completed.'"
         ]
     },
 	"prefer-stable": true
