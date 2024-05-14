@@ -24,11 +24,13 @@ class PostServiceProvider extends ServiceProvider
 	   $this->publishes([
 			__DIR__.'/../resources/views' => resource_path('views/vendor/parser'),
 		]);
-	   $this->publishesMigrations([
-			__DIR__.'/../database/migrations' => database_path('migrations'),
-		]);
-	   $this->publishes([
-			__DIR__.'/../config/social.php' => config_path('social.php'),
-		]);
+		
+		$this->publishes([
+        __DIR__.'/../database/migrations/' => database_path('migrations')
+		], 'social-migrations-parser');
+	
+		$this->publishes([
+			__DIR__.'/../config/social.php' => config_path('social.php')
+		], 'social-config-parser');
     }
 }
