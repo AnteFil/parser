@@ -11,58 +11,58 @@ class InstallPakController extends Controller
 		$filePath = strstr(__DIR__, $_SERVER['SERVER_NAME'], true) . $_SERVER['SERVER_NAME']. '/config/social.php';
 		
 		if (!file_exists($filePath)) {
-			exit("</br><b>Отсутствует конфигурационный файл по пути /config/social.php или к файлу нет доступа.</b>");
+			exit("</br><b>Отсутствует конфигурационный файл /config/social.php или к данному файлу нет доступа.</b>");
 		} 
 		//Файл есть подключаемся к нему
 		$config = include $filePath;
 		// Получаем доступ к данным config массива и проверяем. 
-		if($config['VK_ID_GROUP']=='0'){
-			exit("</br><b>Не указан ID группы ВК для постинга <a href='https://vk.com/groups'>Мои группы ВК</a></b>");
+		if($config['VK_ID_GROUP']==''){
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_ID_GROUP</b>: скрипт использует ID группы ВК для постинга в эту группу <a href='https://vk.com/groups'>Мои группы ВК</a></b>");
 		}
 		
-		if($config['VK_APP_ID']=='0'){
-			exit("</br><b>Не указан ID приложения ВК через которое можно работать с соц.сетью <a href='https://id.vk.com/about/business/go'>Мои группы ВК</a></b>");
+		if($config['VK_APP_ID']==''){
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_APP_ID</b>: скрипт использует ID приложения ВК что бы работать с соц.сетью получить здесь <a href='https://id.vk.com/about/business/go'>Мои группы ВК</a>");
 		}
 		
-		if($config['VK_SERVICE_TOKEN_APP']=='0'){
-			exit("</br><b>Не указан Сервисный ключ доступа <a href='https://id.vk.com/about/business/go'>Сервисный ключ</a></b>");
+		if($config['VK_SERVICE_TOKEN_APP']==''){
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_SERVICE_TOKEN_APP</b>: получить сервисный ключ доступа можено здесь <a href='https://id.vk.com/about/business/go'>Сервисный ключ</a>");
 		}
 	
-		if($config['VK_API_TOKEN_USER']=='0'){
-			exit("</br><b>Не указан ключ пользователя API. Что бы получить его пройдите по ссылке <a href=".route('vendor_add_connect_vk').">получить ключ API</a></b>");
+		if($config['VK_API_TOKEN_USER']==''){
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_API_TOKEN_USER</b>: ключ пользователя API необходим для работы с VK. Что бы получить ключ пользователя API пройдите по ссылке <a href=".route('vendor_add_connect_vk').">получить ключ API</a>");
 		}
 		
 		if($config['VK_VERSION_API']!=='5.131'){
-			exit("</br><b>Вы изменили версию VK API, но скрипту необходима версия 5.131 для корректной работы. В противном случае скрипт может функционировать некорректно.</b>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_VERSION_API</b>: для корректной работы скрипта необходима версия VK API = 5.131.");
 		}
 		
 		if($config['VK_POST_COUNT']==''){
-			exit("</br><b>Вы забыли указать какое количество постов запрашивать в каждой группе </b>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VK_POST_COUNT</b>: этот параметр нужен скриату что бы запрашивать количество постов в каждой группе.");
 		}
 		
 		if($config['ERROR_LOG']==''){
-			exit("</br><b>Вы забыли указать путь для сохранения отчёта о работе скрипта</b>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>ERROR_LOG</b>: необходимо указать путь к файлу для сохранения отчёта о работе скрипта");
 		}
 		
 		if($config['POINTS_MINIMAL']==''){
-			exit("</br><b>Вы забыли указать проходной балл для поста</b>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>POINTS_MINIMAL</b>: необходимо указать порог проходного балла для поста, те посты которые не наберут данного балла будут проигнорированны");
 		}
 		
 		if($config['POST_IN_DAYS']==''){
-			exit("</br><b>Вы забыли указать количество дней, посты опубликованные ранее этого срока, будут считаться устаревшими и будут проигнорированы ботом</b>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>POST_IN_DAYS</b>: необходимо указать количество дней. Посты опубликованные ранее этого срока, будут считаться устаревшими и будут проигнорированы скриптом");
 		}
 		
 		if($config['MAS_MAIN_TEXT']==''){
-			exit("</br><b>Вы не указали путь для сохранения текста в файл перед отправкой на проверку</b>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>MAS_MAIN_TEXT</b>: необходимо указать путь для сохранения текста в файл перед отправкой на проверку.");
 		}
 		if($config['PROCESSING_TEXE']==''){
-			exit("</br><b>Вы не указали путь к скрипту обработки Python</b>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>PROCESSING_TEXE</b>: необходимо указать путь к скрипту обработки <b>Python</b>");
 		}
 		if($config['VEKTOR_DB']==''){
-			exit("</br><b>Вы не указали путь к векторной базе</b>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>VEKTOR_DB</b>: необходимо указать путь к векторной базе");
 		}
 		if($config['RESULT_TEXT_JSON']==''){
-			exit("</br><b>Вы не указали путь к файлу json_text.json для обмена результатами по тексту</b>");
+			exit("</br>В файле <b>/config/social.php</b> отсутствует параметр <b>RESULT_TEXT_JSON</b>: необходимо указать путь к файлу для обмена результатами по тексту");
 		}
 		/*
 		 *
