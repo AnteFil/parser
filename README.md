@@ -11,9 +11,8 @@
 	2. php artisan vendor:publish --provider='Antefil\Parser\Providers\PostServiceProvider'
 
 	3. php artisan migrate
-	Публикация по отдельности:
-	- Опубликовать только конфиг: php artisan vendor:publish --tag=social-config-parser
-	- Опубликовать только миграции: php artisan vendor:publish --tag=social-migrations-parser
+
+Для проверки установки можно перейти по адресу https://site.ru/checking_install_packages
 	
 <table>
     <tr>
