@@ -1,6 +1,6 @@
 {
     "name": "antefil/parser",
-    "type": "project",
+    "type": "library",
     "description": "Первый пакет",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
@@ -19,7 +19,7 @@
 
     "autoload": {
         "psr-4": {
-		"Antefil\\Parser\\": "src"
+		"Antefil\\Parser\\": "src/"
         }
     },
    
@@ -29,5 +29,6 @@
             "Antefil\\Parser\\Providers\\PostServiceProvider"
 			]
 		}
-	}
+	},
+	"prefer-stable": true
 }
