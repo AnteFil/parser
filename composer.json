@@ -30,5 +30,10 @@
 			]
 		}
 	},
+	"scripts": {
+        "post-install-cmd": [
+			"echo 'php artisan vendor:publish --provider='Antefil\Parser\Providers\PostServiceProvider''"
+        ]
+    },
 	"prefer-stable": true
 }
