@@ -21,7 +21,7 @@ class InstallPakController extends Controller
 		}
 		
 		if($config['VK_APP_ID']=='0'){
-			exit("</br><b>Не указан ID приложения ВК через которое можно работать с соц.сетью <a href='https://id.vk.com/about/business/go'>Мои группы ВК</a></b>");
+			exit("</br><b>Не указан ID приложения ВК через которое можно работать с соц.сетью <a href='https://id.vk.com/about/business/go'> Мои группы ВК</a></b>");
 		}
 		
 		if($config['VK_SERVICE_TOKEN_APP']=='0'){
