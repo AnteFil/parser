@@ -27,10 +27,10 @@ class PostServiceProvider extends ServiceProvider
 		
 		$this->publishes([
         __DIR__.'/../database/migrations/' => database_path('migrations')
-		], 'social-migrations-parser');
+		], 'courier-migrations');
 	
 		$this->publishes([
 			__DIR__.'/../config/social.php' => config_path('social.php')
-		], 'social-config-parser');
+		], 'courier-config');
     }
 }
