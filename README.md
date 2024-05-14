@@ -33,7 +33,9 @@
 :sob: Удаление: необходимо выполнить следущее шаги
 	
 	- Удалить запись "antefil/parser": "^1.0", в файле composer.json в корне вашего сайта
-	- Выполнить команду composer dump-autoload
-	- Выполнить команду composer update
-	- php artisan migrate:rollback если выполняли ранее команду php artisan migrate.
+	- Выполнить команду: composer update
+	- Выполнить команду: php artisan migrate:rollback если выполняли ранее команду php artisan migrate.
+	- Удалить файл /config/social.php
+	- Удалить файлы в /database/migrations имеющие в названии create_parser
+	- Удалить папку в /resources/views/vendor/parser
 
