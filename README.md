@@ -1,6 +1,8 @@
 ## Пробные пакеты
 
 Установка
- - composer require antefil/parser:1.0.1.1-dev
+ - composer require antefil/parser
  или
  - composer create-project antefil/parser
+ 
+ php arison vendor:publish
