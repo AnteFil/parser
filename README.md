@@ -34,5 +34,6 @@
 	
 	- Удалить запись "antefil/parser": "^1.0", в файле composer.json в корне вашего сайта
 	- Выполнить команду composer dump-autoload
+	- Выполнить команду composer update
 	- php artisan migrate:rollback если выполняли ранее команду php artisan migrate.
 

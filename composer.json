@@ -1,7 +1,7 @@
 {
     "name": "antefil/parser",
     "type": "library",
-    "description": "Первый пакет",
+    "description": "Умный парсер",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "authors": [
