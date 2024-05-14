@@ -6,14 +6,14 @@
 
 :boom: Используя клавиши <kbd>CTRL</kbd> + <kbd>C</kbd> и <kbd>CTRL</kbd> + <kbd>V</kbd> необходимо выполнить установку
 
-	1. **composer require antefil/parser**
+	1. __composer require antefil/parser__
  
-	2. **php artisan vendor:publish --provider='Antefil\Parser\Providers\PostServiceProvider'**
+	2. __php artisan vendor:publish --provider='Antefil\Parser\Providers\PostServiceProvider'__
 
-	3. **php artisan migrate**
+	3. __php artisan migrate__
 	Публикация по отдельности:
-	- Опубликовать только конфиг: **php artisan vendor:publish --tag=social-config-parser**
-	- Опубликовать только миграции: **php artisan vendor:publish --tag=social-migrations-parser**
+	- Опубликовать только конфиг: __php artisan vendor:publish --tag=social-config-parser__
+	- Опубликовать только миграции: __php artisan vendor:publish --tag=social-migrations-parser__
 	
 <table>
     <tr>
